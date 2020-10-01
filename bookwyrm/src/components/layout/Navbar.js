@@ -26,6 +26,12 @@ const Navbar = (props) => {
       <h4>
         <LinkStyle to="/publishers">Publishers</LinkStyle>
       </h4>
+      <h4>
+        <LinkStyle to="/register">Register</LinkStyle>
+      </h4>
+      <h4>
+        <LinkStyle to="/login">Login</LinkStyle>
+      </h4>
     </div>
   );
 };

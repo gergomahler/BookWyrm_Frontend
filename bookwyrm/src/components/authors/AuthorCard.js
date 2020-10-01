@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const Sprite = styled.img`
-  width: 153px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   margin: 0px;
 `;
@@ -14,27 +14,23 @@ const StyledLink = styled(Link)`
   color: gray;
 `;
 
-function BookCard(props) {
+function AuthorCard(props) {
   const [state, setstate] = useState({
-    book: {
-      authors: [],
-      publishers: [],
+    author: {
+      books: [],
     },
   });
 
   return (
     <div className="card-container">
       <div className="card">
-        <StyledLink to={`/book/${state.book.id}`}>
-          <Sprite className="cover-img" />
-          <h5>{/*{state.book.title}*/} Book Title holder</h5>
-        </StyledLink>
-        <StyledLink to={`/author/${state.book.authorId}`}>
-          <h6>{/*{state.author.name}*/} Author Name holder</h6>
+        <StyledLink to={`/author/${state.author.id}`}>
+          <Sprite className="author-img" />
+          <h5>{/*{state.author.name}*/} Author Name holder</h5>
         </StyledLink>
       </div>
     </div>
   );
 }
 
-export default BookCard;
+export default AuthorCard;

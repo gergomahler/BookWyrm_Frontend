@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import BookCard from "./BookCard";
+import AuthorCard from "./AuthorCard";
 
-function BookList(props) {
+function AuthorList(props) {
   return (
-    <div className="books">
+    <div className="authors">
       <div className="row">
         <div className="col">
           <div className="row">
-            <BookCard></BookCard>
+            <AuthorCard></AuthorCard>
           </div>
         </div>
       </div>
@@ -17,4 +17,4 @@ function BookList(props) {
   );
 }
 
-export default BookList;
+export default AuthorList;
