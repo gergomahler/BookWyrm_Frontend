@@ -14,9 +14,9 @@ const StyledLink = styled(Link)`
   color: gray;
 `;
 
-function AuthorCard(props) {
+function PublisherCard(props) {
   const [state, setstate] = useState({
-    author: {
+    publisher: {
       books: [],
     },
   });
@@ -24,13 +24,13 @@ function AuthorCard(props) {
   return (
     <div className="card-container">
       <div className="card">
-        <StyledLink to={`/author/${state.author.id}`}>
-          <Sprite className="author-img" />
-          <h5>{/*{state.author.name}*/} Author Name holder</h5>
+        <StyledLink to={`/publisher/${state.publisher.id}`}>
+          <Sprite className="publisher-logo" />
+          <h5>{/*{state.publisher.name}*/} Publisher Name holder</h5>
         </StyledLink>
       </div>
     </div>
   );
 }
 
-export default AuthorCard;
+export default PublisherCard;
