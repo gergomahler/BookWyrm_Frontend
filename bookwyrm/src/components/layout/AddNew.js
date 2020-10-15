@@ -22,21 +22,24 @@ function AddNew(props) {
             <div className="row">
                 <div className="col">
                     <div className="row">
-                        
-                        <StyledLink to="/addnew/book">
-                            <Sprite src={".../static/img/bookicon.png"}></Sprite>
+                        <div className="card">
+                            <StyledLink to="/addnew/book">
+                            <Sprite src={process.env.PUBLIC_URL + '/img/bookicon.png'}></Sprite>
                             <h4>New Book</h4>
                             </StyledLink>
                         
+                        
                         <StyledLink to="/addnew/author">
-                            <Sprite src={".../static/img/authoricon.png"}></Sprite>
+                            <Sprite src={process.env.PUBLIC_URL + '/img/authoricon.png'}></Sprite>
                             <h4>New Author</h4>
                             </StyledLink>
+                            
                         
                         <StyledLink to="/addnew/publisher">
-                            <Sprite src={".../static/img/publishericon.png"}></Sprite>
+                            <Sprite src={process.env.PUBLIC_URL + '/img/publishericon.png'}></Sprite>
                             <h4>New Publisher</h4>
                             </StyledLink>
+                            </div>
                      </div>
                 </div>
             </div>
