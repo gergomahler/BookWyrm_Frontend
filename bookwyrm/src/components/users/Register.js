@@ -25,3 +25,40 @@ const StyledInput = styled.input`
 const StyledForm = styled.form`
   margin: auto;
 `;
+
+function Register(props) {
+  return (
+    <React.Fragment>
+      <CenterDiv className="card">
+        <StyledH3>Register</StyledH3>
+        <StyledForm /*action=... method=POST*/>
+          <StyledLabel for="username">
+            <b>Username</b>
+          </StyledLabel>
+          <input
+            type="text"
+            placeholder="username"
+            name="username"
+            required
+          ></input>
+          <StyledLabel for="password">
+            <b>Password</b>
+          </StyledLabel>
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            required
+          ></input>
+          <StyledInput
+            type="submit"
+            className="registerbtn"
+            value="Register"
+          ></StyledInput>
+        </StyledForm>
+      </CenterDiv>
+    </React.Fragment>
+  );
+}
+
+export default Register;
