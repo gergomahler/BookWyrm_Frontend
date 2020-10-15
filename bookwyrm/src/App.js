@@ -10,6 +10,7 @@ import Login from "./components/users/Login";
 import BookList from "./components/books/BookList";
 import AuthorList from "./components/authors/AuthorList";
 import PublisherList from "./components/publishers/PublisherList";
+import AddNew from "./components/layout/AddNew";
 import AddNewBook from "./components/books/AddNewBook";
 
 const CardContainer = styled.div`
@@ -30,12 +31,13 @@ const App = (props) => {
         <Navbar />
         <CardContainer>
           <PageContext.Provider value={pc}>
-            <Route exact path="/addbook" component={AddNewBook} />
             <Route exact path="/books" component={BookList} />
             <Route exact path="/authors/" component={AuthorList} />
             <Route exact path="/publishers/" component={PublisherList} />
           </PageContext.Provider>
 
+          <Route exact path="/addnew" component={AddNew} />
+          <Route exact path="/addnew/book" component={AddNewBook} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
         </CardContainer>

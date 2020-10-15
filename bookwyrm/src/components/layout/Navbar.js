@@ -18,7 +18,7 @@ const Navbar = (props) => {
         <LinkStyle to="/">Home</LinkStyle>
       </h4>
       <h4>
-        <LinkStyle to="/addbook">Add Book</LinkStyle>
+        <LinkStyle to="/addnew">New</LinkStyle>
       </h4>
       <h4>
         <LinkStyle to="/books">Books</LinkStyle>
