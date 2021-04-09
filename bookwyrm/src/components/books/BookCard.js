@@ -24,38 +24,34 @@ function BookCard(props) {
 
   useEffect(() => {
     axios({
-      method: 'GET',
-      url: 'http://localhost/63425/api/Books',
-      
+      method: "GET",
+      url: "http://localhost:44327/api/Books",
     })
-    .then((response) => {
-      setstate({ book: response.data });
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      .then((response) => {
+        setstate({ book: response.data });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [props.book.id]);
-  // eslint-disable-next-line no-unused-vars
-  let writers = "";
-  writers += state.book.authors.map((writer) => {
-    return writer.name;
-  });
 
   return (
     <div className="card-container">
       <div className="card">
         <StyledLink to={`/book/${state.book.id}`}>
           <Sprite className="cover-img" />
-          <h5>{/*{state.book.title}*/} Book Title holder</h5>
+          <h5>
+            {state.book.title} {/*Book Title holder*/}
+          </h5>
         </StyledLink>
         {state.book.authors.map((writer) => {
           return (
-          <StyledLink key={writer.id} to={`/author/${writer.id}`}>
-            <h6>{/*{writer.name}*/} Author Name holder</h6>
-          </StyledLink>
+            <StyledLink key={writer.id} to={`/author/${writer.Id}`}>
+              <h6>{/*{writer.name}*/} Author Name holder</h6>
+            </StyledLink>
           );
         })}
-        
+
         <StyledLink to={`/publisher/${state.book.publisherId}`}>
           <h6>{/*{state.book.publisher*/} Publisher Name holder</h6>
         </StyledLink>
